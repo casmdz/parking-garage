@@ -3,34 +3,64 @@
 #     parkingSpaces -> list
 #     currentTicket -> dictionary
 
+        # self.tickets = []
+        # self.parkingSpaces = [] 
+        # self.currentTicket = {}
+    
+
 
 class parkingGarage():
-    def __init__(self, spaces):
+
+    tickets= 10
+    # parkingSpaces = 10
+    currentTicket = {} #paid=true/false
+
+    def __init__(self, tickets, parkingSpaces, currentickets):
+        
         self.tickets = []
-        self.parkingSpaces = [] 
+        self.parkingSpaces = 10
         self.currentTicket = {}
-    
+
+    def parkingSpaces(self):
+        return self.parkingSpaces
+
+
     def takeTicket(self):
-    # - This should decrease the amount of tickets available by 1
-    # - This should decrease the amount of parkingSpaces available by 1
-        pass 
+            # user comes in
+            # takes ticket
+            # ticket gets a number and variable of paid 
+            #     spaces go down 1 
+            #return self.tickets (how many are avail)
+
+            #showCapacity()
+
+        if parkingGarage.tickets == 10:
+            print ('sorry no more tickets')
+
+        ticket_number= len(self.tickets) + 1 #from garage list... creates a ticket number by adding 1 to the list (which starts off as 0 []), and will keep adding one (so ticket #2, and #3 and so on...) so when we Take Ticket, we can see #1/2/3... paid or not
+        myticket = {
+            "ticket number": ticket_number, 
+            "paid": False}
+        self.currentTicket = myticket 
+        parkingGarage.parkingSpaces -= 1
+
+        # parkingGarage.tickets += 1
+        return self.tickets 
+        
+
 
     def payForParking(self):
-    # - Display an input that waits for an amount from the user and store it in a variable
-
-    # - If the payment variable is not empty then (meaning the ticket has been paid) -> display a message to the user that their ticket has been paid and they have 15mins to leave
-
-    # - This should update the "currentTicket" dictionary key "paid" to True
-        pass
+        payment = ()
+        if payment:
+            self.currentTicket = True:
+            print('thanks for paying, you have 15 minutes to leave')
     
 
     def leaveGarage(self):
-    # - If the ticket has been paid, display a message of "Thank You, have a nice day"
-    # - If the ticket has not been paid, display an input prompt for payment
+        if payment:
+            self.currentTicket = True
+        print("Thank you have a nice a nice")
 
-        pass
 
 
-# - Update parkingSpaces list to increase by 1 (meaning add to the parkingSpaces list)
-# - Update tickets list to increase by 1 (meaning add to the tickets list)
 print('Have a nice day!')
