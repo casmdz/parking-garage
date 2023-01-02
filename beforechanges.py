@@ -59,7 +59,7 @@ class parkingGarage():
     def payForParking(self):
         payment = ()
         if payment:
-            self.currentTicket = True:
+            self.currentTicket = True
             print('thanks for paying, you have 15 minutes to leave')
     
     #turn ticket (which is currently a string) you need to turn it into an integer 
